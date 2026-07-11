@@ -1,7 +1,7 @@
 # 🐍 Snake Game (Python)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Turtle_Graphics-Built--In-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Object_Oriented_Programming-OOP-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" />
@@ -18,13 +18,11 @@
 
 ---
 
-## 📖 Overview
+# 📖 Overview
 
-A classic **Snake Game** developed using **Python** and the built-in **Turtle Graphics** module.
+A classic **Snake Game** built using **Python** and the built-in **Turtle Graphics** module.
 
-This project demonstrates the fundamentals of **Object-Oriented Programming (OOP)** by separating the game's logic into multiple classes. It includes smooth snake movement, random food spawning, collision detection, score tracking, and a persistent high-score system that stores the highest score even after the game is closed.
-
-The project is lightweight, beginner-friendly, and a great example of organizing Python applications into reusable modules.
+The project demonstrates **Object-Oriented Programming (OOP)** principles by organizing the game into multiple modules. It features smooth snake movement, random food generation, collision detection, score tracking, and a persistent high-score system.
 
 ---
 
@@ -45,10 +43,10 @@ The project is lightweight, beginner-friendly, and a great example of organizing
 - 💥 Wall collision detection
 - 🔄 Self-collision detection
 - 🎮 Responsive keyboard controls
-- 📂 Modular Object-Oriented architecture
-- ⚡ Automatic game reset after collision
-- 💾 High score saved locally
-- 🚀 Lightweight with no external dependencies
+- 🧩 Object-Oriented Programming (OOP)
+- 🚀 Automatic game reset after collision
+- 💾 Local high-score storage
+- ⚡ Lightweight and beginner-friendly
 
 ---
 
@@ -58,24 +56,24 @@ The project is lightweight, beginner-friendly, and a great example of organizing
 |------------|---------|
 | Python 3 | Programming Language |
 | Turtle Graphics | Game Rendering |
-| OOP | Code Structure |
+| Object-Oriented Programming | Modular Code Structure |
 | Random Module | Food Generation |
-| Text File (`data.txt`) | High Score Storage |
+| File Handling | Persistent High Score |
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 snake-game-python/
 │
 ├── images/
 │   └── game_screenshot.png
 │
 ├── main.py
-├── snake.py
-├── food.py
-├── scoreboard.py
+├── snake1_game.py
+├── snake2_game.py
+├── snake3_game.py
 ├── data.txt
 ├── README.md
 ├── LICENSE
@@ -88,44 +86,45 @@ snake-game-python/
 
 | File | Description |
 |------|-------------|
-| `main.py` | Creates the game window, initializes all game objects, handles keyboard events, manages the game loop, and detects collisions. |
-| `snake.py` | Defines the Snake class, controls movement, growth, and prevents reversing direction. |
-| `food.py` | Generates food at random positions whenever the snake eats. |
-| `scoreboard.py` | Displays the score, updates the high score, and saves it permanently to `data.txt`. |
-| `data.txt` | Stores the highest score achieved by the player. |
-| `images/` | Contains screenshots used in the README. |
+| `main.py` | Entry point of the game. Creates the game window, initializes objects, handles the main game loop, keyboard input, and collision detection. |
+| `snake1_game.py` | Contains the **Snake** class responsible for snake creation, movement, growth, reset logic, and directional controls. |
+| `snake2_game.py` | Contains the **Food** class responsible for generating food at random locations whenever the snake eats. |
+| `snake3_game.py` | Contains the **Scoreboard** class responsible for displaying the score, managing the high score, and saving it permanently to `data.txt`. |
+| `data.txt` | Stores the highest score achieved so it persists between game sessions. |
+| `images/` | Stores screenshots and other images used in the README. |
 
 ---
 
-# 🧩 Object-Oriented Design
-
-The game follows a modular OOP architecture where each class is responsible for a single task.
+# 🧩 Project Architecture
 
 ```text
-                +------------------+
-                |     main.py      |
-                +------------------+
-                 /       |       \
-                /        |        \
-               /         |         \
-      +---------+   +---------+   +---------------+
-      | snake.py|   | food.py |   | scoreboard.py |
-      +---------+   +---------+   +---------------+
-            |             |               |
-            |             |               |
-      Snake Movement   Food Spawn     Score & High Score
+                 +----------------+
+                 |    main.py     |
+                 +----------------+
+                  /      |       \
+                 /       |        \
+                /        |         \
+               ▼         ▼          ▼
+      +----------------+ +----------------+ +----------------+
+      | snake1_game.py | | snake2_game.py | | snake3_game.py |
+      +----------------+ +----------------+ +----------------+
+             │                   │                   │
+             ▼                   ▼                   ▼
+      Snake Movement       Food Generation     Score Management
 ```
 
 ---
 
-# ⚙️ How the Game Works
+# ⚙️ How It Works
 
 ### 1️⃣ Game Initialization
 
-- Creates the Turtle screen
-- Sets screen size
-- Enables keyboard listeners
-- Creates:
+The game starts by:
+
+- Creating the Turtle screen
+- Setting the screen size
+- Enabling keyboard listeners
+- Initializing:
   - Snake
   - Food
   - Scoreboard
@@ -138,37 +137,37 @@ The game continuously:
 
 - Updates the screen
 - Moves the snake
-- Checks food collision
-- Checks wall collision
-- Checks self collision
+- Detects food collisions
+- Detects wall collisions
+- Detects self collisions
 - Updates the score
 
 ---
 
-### 3️⃣ Eating Food
+### 3️⃣ Food Collection
 
-Whenever the snake touches the food:
+Whenever the snake reaches the food:
 
-- Food moves to a new random location
-- Snake grows by one segment
+- Food relocates to a random position
+- Snake grows longer
 - Score increases
-- High score updates if necessary
+- High score updates automatically
 
 ---
 
 ### 4️⃣ Collision Detection
 
-The game detects:
+The game checks for:
 
-✅ Wall collision
+✅ Wall Collision
 
-- Snake touches screen boundary
+- Snake touches the game boundary.
 
-✅ Self collision
+✅ Self Collision
 
-- Snake touches its own body
+- Snake collides with its own body.
 
-Instead of closing the game, it automatically resets while preserving the high score.
+Instead of exiting, the game automatically resets while preserving the highest score.
 
 ---
 
@@ -185,7 +184,7 @@ Instead of closing the game, it automatically resets while preserving the high s
 
 # 🚀 Getting Started
 
-## 1. Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/snake-game-python.git
@@ -193,7 +192,7 @@ git clone https://github.com/yourusername/snake-game-python.git
 
 ---
 
-## 2. Navigate to the Project
+## Navigate to the Project
 
 ```bash
 cd snake-game-python
@@ -201,7 +200,7 @@ cd snake-game-python
 
 ---
 
-## 3. Run the Game
+## Run the Game
 
 ```bash
 python main.py
@@ -211,74 +210,57 @@ python main.py
 
 # 💾 High Score System
 
-The game stores the highest score inside:
+The highest score is stored inside:
 
-```
+```text
 data.txt
 ```
 
-Unlike many beginner Snake games, the high score is **persistent**, meaning it remains saved even after closing the game.
+Whenever a new record is achieved, it is automatically saved. The score remains available even after restarting or closing the game.
 
 ---
 
-# 📸 Game Mechanics
+# 📚 Concepts Demonstrated
 
-| Event | Result |
-|--------|--------|
-| Snake eats food | Snake grows |
-| Snake hits wall | Game resets |
-| Snake hits itself | Game resets |
-| New high score | Saved automatically |
-| Restart | High score remains |
-
----
-
-# 🌟 Learning Outcomes
-
-This project demonstrates:
+This project showcases:
 
 - Object-Oriented Programming (OOP)
-- Class Design
 - Python Modules
 - Turtle Graphics
 - Event Handling
+- Keyboard Listeners
 - Collision Detection
 - File Handling
-- Game Loops
-- Keyboard Input
-- Random Position Generation
-- Code Organization
+- Random Number Generation
+- Game Loop Design
 - Modular Programming
+- Code Reusability
 
 ---
 
-# 📈 Possible Improvements
+# 📌 Future Improvements
 
-Future enhancements could include:
+Potential enhancements include:
 
 - 🔊 Sound effects
 - 🎵 Background music
-- 🎯 Multiple difficulty levels
-- ⏸ Pause / Resume functionality
+- 🎯 Difficulty levels
+- ⏸ Pause / Resume
 - 💣 Obstacles
 - ⚡ Power-ups
-- 🌙 Dark / Light themes
 - 🏅 Achievement system
+- 🌙 Theme customization
 - 🥇 Online leaderboard
-- 🎨 Improved graphics
-- 🕹 Start menu
-- 💖 Multiple lives
-- 📱 Pygame version
+- 🎨 Improved graphics using Pygame
 
 ---
 
 # 🤝 Contributing
 
-Contributions are always welcome.
-
-If you'd like to improve this project:
+Contributions are welcome!
 
 1. Fork the repository
+
 2. Create a new branch
 
 ```bash
@@ -291,7 +273,7 @@ git checkout -b feature/YourFeature
 git commit -m "Add Your Feature"
 ```
 
-4. Push the branch
+4. Push your branch
 
 ```bash
 git push origin feature/YourFeature
@@ -303,9 +285,9 @@ git push origin feature/YourFeature
 
 # ⭐ Support
 
-If you found this project helpful, please consider giving it a **⭐ Star** on GitHub.
+If you enjoyed this project or found it useful, consider giving it a **⭐ Star** on GitHub.
 
-It helps the project reach more developers and motivates future improvements.
+Your support helps the project reach more developers and motivates future improvements.
 
 ---
 
@@ -313,7 +295,7 @@ It helps the project reach more developers and motivates future improvements.
 
 This project is licensed under the **MIT License**.
 
-See the **LICENSE** file for more details.
+See the `LICENSE` file for more information.
 
 ---
 
