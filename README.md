@@ -1,4 +1,4 @@
-# 🐍 Snake Game (Python)
+#  Snake Game Python
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
