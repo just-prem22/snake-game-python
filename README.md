@@ -275,6 +275,32 @@ git push origin feature/YourFeature
 5. Open a Pull Request
 
 ---
+## 🚀 Future Improvements
+
+Although the project is complete and fully playable, there are several features that could be added in future versions:
+
+- 🔊 Sound effects and background music
+- ⏸️ Pause and resume functionality
+- 🎮 Multiple difficulty levels
+- 🏆 Persistent high score storage
+- 🎨 Customizable snake themes and colors
+- 🌐 Multiplayer mode
+- 📱 Better support for different screen resolutions
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+Every contribution helps make the project better.
 
 # ⭐ Support
 
