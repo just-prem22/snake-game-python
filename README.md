@@ -22,7 +22,7 @@ The project demonstrates **Object-Oriented Programming (OOP)** principles by org
 # 📸 Gameplay
 
 <p align="center">
-  <img src="images/game_screenshot.png" alt="Snake Game Screenshot" width="850">
+  <img src="game_screenshot.png" alt="Snake Game Screenshot" width="750">
 </p>
 
 ---
