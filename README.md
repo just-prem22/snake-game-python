@@ -3,39 +3,37 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Status-Completed-success" />
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-informational" />
+  <img src="https://img.shields.io/badge/Platform-Windows%20|%20macOS%20|%20Linux-informational" />
   <img src="https://img.shields.io/badge/License-MIT-green" />
 </p>
 
-A classic **Snake Game** built using **Python Turtle Graphics**. The game features smooth movement, random food generation, collision detection, and a persistent high-score system that stores your best score even after restarting the game.
+A classic **Snake Game** built using **Python Turtle Graphics**. The project follows an **Object-Oriented Programming (OOP)** approach and includes smooth gameplay, collision detection, food generation, and a persistent high-score system.
 
 ---
 
-## 📸 Gameplay
-
-> Replace the image below with your own gameplay screenshot.
+# 📸 Gameplay
 
 <p align="center">
-  <img src="assets/snake-gameplay.png" alt="Snake Game Gameplay" width="700">
+  <img src="images/game_screenshot.png" alt="Snake Game Screenshot" width="750">
 </p>
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - 🐍 Smooth snake movement
-- 🍎 Random food spawning
-- 📈 Live score tracking
+- 🍎 Random food generation
+- 📈 Real-time score tracking
 - 🏆 Persistent high-score system
 - 💥 Wall collision detection
 - 🔄 Self-collision detection
-- 🚀 Automatic game reset
-- 🧩 Object-Oriented Programming (OOP) implementation
-- 🎮 Simple keyboard controls
+- 🎮 Responsive keyboard controls
+- 🧩 Object-Oriented Programming (OOP)
+- 🚀 Automatic game reset after collision
 
 ---
 
-## 🛠️ Built With
+# 🛠️ Technologies Used
 
 - Python 3
 - Turtle Graphics
@@ -43,13 +41,13 @@ A classic **Snake Game** built using **Python Turtle Graphics**. The game featur
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
 snake-game-python/
 │
-├── assets/
-│   └── snake-gameplay.png
+├── images/
+│   └── game_screenshot.png
 │
 ├── main.py
 ├── snake.py
@@ -57,26 +55,39 @@ snake-game-python/
 ├── scoreboard.py
 ├── data.txt
 ├── README.md
+├── LICENSE
 └── .gitignore
 ```
 
 ---
 
-## 🚀 Getting Started
+# 📄 File Description
 
-### 1️⃣ Clone the repository
+| File | Purpose |
+|------|---------|
+| `main.py` | Starts the game, handles the game loop, keyboard input, and collision detection. |
+| `snake.py` | Implements the snake's movement, growth, and controls. |
+| `food.py` | Generates food at random positions on the screen. |
+| `scoreboard.py` | Displays the current score, manages the high score, and saves it to `data.txt`. |
+| `data.txt` | Stores the highest score achieved. |
+
+---
+
+# 🚀 Getting Started
+
+## Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/snake-game-python.git
 ```
 
-### 2️⃣ Navigate to the project
+## Navigate to the project
 
 ```bash
 cd snake-game-python
 ```
 
-### 3️⃣ Run the game
+## Run the game
 
 ```bash
 python main.py
@@ -84,7 +95,7 @@ python main.py
 
 ---
 
-## 🎮 Controls
+# 🎮 Controls
 
 | Key | Action |
 |------|--------|
@@ -95,78 +106,42 @@ python main.py
 
 ---
 
-## 🧠 How It Works
+# 🧠 How It Works
 
-The project is divided into multiple modules following Object-Oriented Programming principles.
+The project is divided into separate modules to keep the code organized and maintainable.
 
-- **Snake** handles movement, growth, and direction.
-- **Food** generates random food positions.
-- **Scoreboard** manages score display and stores the highest score.
-- **Main** controls the game loop, collision detection, and user input.
+- **main.py** initializes the game window and controls the main game loop.
+- **snake.py** manages the snake's movement, growth, and direction.
+- **food.py** generates food at random positions after every collection.
+- **scoreboard.py** updates the score and permanently stores the highest score using `data.txt`.
 
 ---
 
-## 📌 Future Improvements
+# 📌 Future Improvements
 
 - 🔊 Sound effects
+- 🎵 Background music
 - 🎯 Difficulty levels
-- ⏸️ Pause and Resume feature
-- 🎨 Improved UI
+- ⏸️ Pause / Resume functionality
 - 💣 Obstacles
 - ⚡ Power-ups
 - 🏅 Achievement system
+- 🌙 Theme customization
 
 ---
 
-## 📷 Screenshot
+# ⭐ If You Like This Project
 
-Add your own gameplay screenshot inside the **assets** folder and name it:
-
-```
-snake-gameplay.png
-```
+If you found this project useful or interesting, consider giving it a **⭐ Star** on GitHub. It helps support the project and encourages future development.
 
 ---
 
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome!
-
-1. Fork the repository
-2. Create a new branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push to GitHub
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
-
----
-
-## ⭐ Support
-
-If you found this project helpful, consider giving it a ⭐ on GitHub. It helps support the project and motivates future improvements.
-
----
-
-## 📄 License
+# 📜 License
 
 This project is licensed under the **MIT License**.
 
 ---
 
 <p align="center">
-  Made with ❤️ using Python
+Made with ❤️ using Python
 </p>
