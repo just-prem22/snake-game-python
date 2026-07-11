@@ -1,20 +1,37 @@
 # 🐍 Snake Game (Python)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Completed-success" />
-  <img src="https://img.shields.io/badge/Platform-Windows%20|%20macOS%20|%20Linux-informational" />
-  <img src="https://img.shields.io/badge/License-MIT-green" />
+  <img src="https://img.shields.io/badge/Python-3.13+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Turtle_Graphics-Built--In-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Object_Oriented_Programming-OOP-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" />
 </p>
 
-A classic **Snake Game** built using **Python Turtle Graphics**. The project follows an **Object-Oriented Programming (OOP)** approach and includes smooth gameplay, collision detection, food generation, and a persistent high-score system.
+<p align="center">
+  <img src="https://img.shields.io/github/license/yourusername/snake-game-python?style=flat-square" />
+  <img src="https://img.shields.io/github/stars/yourusername/snake-game-python?style=flat-square" />
+  <img src="https://img.shields.io/github/forks/yourusername/snake-game-python?style=flat-square" />
+  <img src="https://img.shields.io/github/repo-size/yourusername/snake-game-python?style=flat-square" />
+  <img src="https://img.shields.io/github/last-commit/yourusername/snake-game-python?style=flat-square" />
+  <img src="https://img.shields.io/github/issues/yourusername/snake-game-python?style=flat-square" />
+</p>
+
+---
+
+## 📖 Overview
+
+A classic **Snake Game** developed using **Python** and the built-in **Turtle Graphics** module.
+
+This project demonstrates the fundamentals of **Object-Oriented Programming (OOP)** by separating the game's logic into multiple classes. It includes smooth snake movement, random food spawning, collision detection, score tracking, and a persistent high-score system that stores the highest score even after the game is closed.
+
+The project is lightweight, beginner-friendly, and a great example of organizing Python applications into reusable modules.
 
 ---
 
 # 📸 Gameplay
 
 <p align="center">
-  <img src="images/game_screenshot.png" alt="Snake Game Screenshot" width="750">
+  <img src="images/game_screenshot.png" alt="Snake Game Screenshot" width="850">
 </p>
 
 ---
@@ -23,21 +40,27 @@ A classic **Snake Game** built using **Python Turtle Graphics**. The project fol
 
 - 🐍 Smooth snake movement
 - 🍎 Random food generation
-- 📈 Real-time score tracking
+- 📈 Live score tracking
 - 🏆 Persistent high-score system
 - 💥 Wall collision detection
 - 🔄 Self-collision detection
 - 🎮 Responsive keyboard controls
-- 🧩 Object-Oriented Programming (OOP)
-- 🚀 Automatic game reset after collision
+- 📂 Modular Object-Oriented architecture
+- ⚡ Automatic game reset after collision
+- 💾 High score saved locally
+- 🚀 Lightweight with no external dependencies
 
 ---
 
-# 🛠️ Technologies Used
+# 🛠 Technologies Used
 
-- Python 3
-- Turtle Graphics
-- Object-Oriented Programming (OOP)
+| Technology | Purpose |
+|------------|---------|
+| Python 3 | Programming Language |
+| Turtle Graphics | Game Rendering |
+| OOP | Code Structure |
+| Random Module | Food Generation |
+| Text File (`data.txt`) | High Score Storage |
 
 ---
 
@@ -63,35 +86,89 @@ snake-game-python/
 
 # 📄 File Description
 
-| File | Purpose |
-|------|---------|
-| `main.py` | Starts the game, handles the game loop, keyboard input, and collision detection. |
-| `snake.py` | Implements the snake's movement, growth, and controls. |
-| `food.py` | Generates food at random positions on the screen. |
-| `scoreboard.py` | Displays the current score, manages the high score, and saves it to `data.txt`. |
-| `data.txt` | Stores the highest score achieved. |
+| File | Description |
+|------|-------------|
+| `main.py` | Creates the game window, initializes all game objects, handles keyboard events, manages the game loop, and detects collisions. |
+| `snake.py` | Defines the Snake class, controls movement, growth, and prevents reversing direction. |
+| `food.py` | Generates food at random positions whenever the snake eats. |
+| `scoreboard.py` | Displays the score, updates the high score, and saves it permanently to `data.txt`. |
+| `data.txt` | Stores the highest score achieved by the player. |
+| `images/` | Contains screenshots used in the README. |
 
 ---
 
-# 🚀 Getting Started
+# 🧩 Object-Oriented Design
 
-## Clone the repository
+The game follows a modular OOP architecture where each class is responsible for a single task.
 
-```bash
-git clone https://github.com/yourusername/snake-game-python.git
+```text
+                +------------------+
+                |     main.py      |
+                +------------------+
+                 /       |       \
+                /        |        \
+               /         |         \
+      +---------+   +---------+   +---------------+
+      | snake.py|   | food.py |   | scoreboard.py |
+      +---------+   +---------+   +---------------+
+            |             |               |
+            |             |               |
+      Snake Movement   Food Spawn     Score & High Score
 ```
 
-## Navigate to the project
+---
 
-```bash
-cd snake-game-python
-```
+# ⚙️ How the Game Works
 
-## Run the game
+### 1️⃣ Game Initialization
 
-```bash
-python main.py
-```
+- Creates the Turtle screen
+- Sets screen size
+- Enables keyboard listeners
+- Creates:
+  - Snake
+  - Food
+  - Scoreboard
+
+---
+
+### 2️⃣ Main Game Loop
+
+The game continuously:
+
+- Updates the screen
+- Moves the snake
+- Checks food collision
+- Checks wall collision
+- Checks self collision
+- Updates the score
+
+---
+
+### 3️⃣ Eating Food
+
+Whenever the snake touches the food:
+
+- Food moves to a new random location
+- Snake grows by one segment
+- Score increases
+- High score updates if necessary
+
+---
+
+### 4️⃣ Collision Detection
+
+The game detects:
+
+✅ Wall collision
+
+- Snake touches screen boundary
+
+✅ Self collision
+
+- Snake touches its own body
+
+Instead of closing the game, it automatically resets while preserving the high score.
 
 ---
 
@@ -106,33 +183,129 @@ python main.py
 
 ---
 
-# 🧠 How It Works
+# 🚀 Getting Started
 
-The project is divided into separate modules to keep the code organized and maintainable.
+## 1. Clone the Repository
 
-- **main.py** initializes the game window and controls the main game loop.
-- **snake.py** manages the snake's movement, growth, and direction.
-- **food.py** generates food at random positions after every collection.
-- **scoreboard.py** updates the score and permanently stores the highest score using `data.txt`.
+```bash
+git clone https://github.com/yourusername/snake-game-python.git
+```
 
 ---
 
-# 📌 Future Improvements
+## 2. Navigate to the Project
+
+```bash
+cd snake-game-python
+```
+
+---
+
+## 3. Run the Game
+
+```bash
+python main.py
+```
+
+---
+
+# 💾 High Score System
+
+The game stores the highest score inside:
+
+```
+data.txt
+```
+
+Unlike many beginner Snake games, the high score is **persistent**, meaning it remains saved even after closing the game.
+
+---
+
+# 📸 Game Mechanics
+
+| Event | Result |
+|--------|--------|
+| Snake eats food | Snake grows |
+| Snake hits wall | Game resets |
+| Snake hits itself | Game resets |
+| New high score | Saved automatically |
+| Restart | High score remains |
+
+---
+
+# 🌟 Learning Outcomes
+
+This project demonstrates:
+
+- Object-Oriented Programming (OOP)
+- Class Design
+- Python Modules
+- Turtle Graphics
+- Event Handling
+- Collision Detection
+- File Handling
+- Game Loops
+- Keyboard Input
+- Random Position Generation
+- Code Organization
+- Modular Programming
+
+---
+
+# 📈 Possible Improvements
+
+Future enhancements could include:
 
 - 🔊 Sound effects
 - 🎵 Background music
-- 🎯 Difficulty levels
-- ⏸️ Pause / Resume functionality
+- 🎯 Multiple difficulty levels
+- ⏸ Pause / Resume functionality
 - 💣 Obstacles
 - ⚡ Power-ups
+- 🌙 Dark / Light themes
 - 🏅 Achievement system
-- 🌙 Theme customization
+- 🥇 Online leaderboard
+- 🎨 Improved graphics
+- 🕹 Start menu
+- 💖 Multiple lives
+- 📱 Pygame version
 
 ---
 
-# ⭐ If You Like This Project
+# 🤝 Contributing
 
-If you found this project useful or interesting, consider giving it a **⭐ Star** on GitHub. It helps support the project and encourages future development.
+Contributions are always welcome.
+
+If you'd like to improve this project:
+
+1. Fork the repository
+2. Create a new branch
+
+```bash
+git checkout -b feature/YourFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add Your Feature"
+```
+
+4. Push the branch
+
+```bash
+git push origin feature/YourFeature
+```
+
+5. Open a Pull Request
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, please consider giving it a **⭐ Star** on GitHub.
+
+It helps the project reach more developers and motivates future improvements.
 
 ---
 
@@ -140,8 +313,18 @@ If you found this project useful or interesting, consider giving it a **⭐ Star
 
 This project is licensed under the **MIT License**.
 
+See the **LICENSE** file for more details.
+
+---
+
+# 👨‍💻 Author
+
+**Prem Kumar**
+
+GitHub: https://github.com/yourusername
+
 ---
 
 <p align="center">
-Made with ❤️ using Python
+  <b>Made with ❤️ using Python and Turtle Graphics</b>
 </p>
