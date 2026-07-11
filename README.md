@@ -7,14 +7,7 @@
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/license/yourusername/snake-game-python?style=flat-square" />
-  <img src="https://img.shields.io/github/stars/yourusername/snake-game-python?style=flat-square" />
-  <img src="https://img.shields.io/github/forks/yourusername/snake-game-python?style=flat-square" />
-  <img src="https://img.shields.io/github/repo-size/yourusername/snake-game-python?style=flat-square" />
-  <img src="https://img.shields.io/github/last-commit/yourusername/snake-game-python?style=flat-square" />
-  <img src="https://img.shields.io/github/issues/yourusername/snake-game-python?style=flat-square" />
-</p>
+
 
 ---
 
