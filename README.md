@@ -296,7 +296,7 @@ See the `LICENSE` file for more information.
 
 **Prem Kumar**
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/just-prem22
 
 ---
 
